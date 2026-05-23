@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+html {
+  font-family: 'Press Start 2P', monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1c1917;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #292524;
+  border-left: 2px solid #44403c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #57534e;
+  border: 2px solid #292524;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #78716c;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #d97706;
+  border: 3px solid #92400e;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  background: #44403c;
+  border: 2px solid #57534e;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #d97706;
+  border: 3px solid #92400e;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 8px;
+  background: #44403c;
+  border: 2px solid #57534e;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
